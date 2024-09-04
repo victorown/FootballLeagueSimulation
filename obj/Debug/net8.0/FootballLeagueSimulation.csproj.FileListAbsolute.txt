@@ -16,3 +16,21 @@ C:\Users\LENOVO\OneDrive\Desktop\..d\FootballLeagueSimulation\FootballLeagueSimu
 C:\Users\LENOVO\OneDrive\Desktop\..d\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\FootballLeagueSimulation.pdb
 C:\Users\LENOVO\OneDrive\Desktop\..d\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\FootballLeagueSimulation.genruntimeconfig.cache
 C:\Users\LENOVO\OneDrive\Desktop\..d\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\ref\FootballLeagueSimulation.dll
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\bin\Debug\net8.0\FootballLeagueSimulation.exe
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\bin\Debug\net8.0\FootballLeagueSimulation.deps.json
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\bin\Debug\net8.0\FootballLeagueSimulation.runtimeconfig.json
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\bin\Debug\net8.0\FootballLeagueSimulation.dll
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\bin\Debug\net8.0\FootballLeagueSimulation.pdb
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\FootballLeagueSimulation.csproj.AssemblyReference.cache
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\FootballLeagueSimulation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\FootballLeagueSimulation.AssemblyInfoInputs.cache
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\FootballLeagueSimulation.AssemblyInfo.cs
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\FootballLeagueSimulation.csproj.CoreCompileInputs.cache
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\FootballLeagueSimulation.sourcelink.json
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\Football.74019239.Up2Date
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\FootballLeagueSimulation.dll
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\refint\FootballLeagueSimulation.dll
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\FootballLeagueSimulation.pdb
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\FootballLeagueSimulation.genruntimeconfig.cache
+D:\Learn CS\FootballLeagueSimulation\FootballLeagueSimulation\obj\Debug\net8.0\ref\FootballLeagueSimulation.dll

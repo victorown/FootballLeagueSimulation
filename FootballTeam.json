@@ -1,0 +1,290 @@
+[
+    {
+        "Name": "Thunderhawks FC",
+        "Players": [
+            "Jackson Ward",
+            "Hunter Wood",
+            "Levi Murphy",
+            "Logan Lee",
+            "Ryan Hughes",
+            "Mason Turner",
+            "Grayson Walker",
+            "Nolan Morris",
+            "James Howard",
+            "Ethan Murphy",
+            "Lucas Reed"
+        ]
+    },
+    {
+        "Name": "Golden Strikers",
+        "Players": [
+            "Michael Price",
+            "Elijah Powell",
+            "Robert Ross",
+            "Jacob Baker",
+            "Henry Rivera",
+            "Joseph Ramirez",
+            "Aiden Jenkins",
+            "Alexander Morgan",
+            "Liam Bennett",
+            "Owen Turner",
+            "Noah Sanders"
+        ]
+    },
+    {
+        "Name": "Falcon Warriors",
+        "Players": [
+            "Elijah Morgan",
+            "Isaiah Cooper",
+            "Mason Cox",
+            "Nolan Parker",
+            "Jackson Gray",
+            "Levi Gonzalez",
+            "Liam Ramirez",
+            "Henry Bell",
+            "Zachary Brooks",
+            "Hudson Hayes",
+            "Samuel Campbell"
+        ]
+    },
+    {
+        "Name": "Shadow Rovers",
+        "Players": [
+            "Robert Price",
+            "Oliver Sanchez",
+            "Ethan Wood",
+            "Grayson Howard",
+            "Owen Bennett",
+            "Logan Howard",
+            "Ryan Ross",
+            "Benjamin Murphy",
+            "Henry Gray",
+            "Isaiah Reed",
+            "Jackson Reed"
+        ]
+    },
+    {
+        "Name": "Silver Eagles",
+        "Players": [
+            "Mason Gray",
+            "Liam Murphy",
+            "Levi Peterson",
+            "Alexander Murphy",
+            "Nolan Hayes",
+            "Elijah Rivera",
+            "Hudson Turner",
+            "Robert Carter",
+            "Liam Diaz",
+            "Aiden Murphy",
+            "Zachary Carter"
+        ]
+    },
+    {
+        "Name": "Phoenix United",
+        "Players": [
+            "Oliver Clark",
+            "Benjamin Davis",
+            "Michael Gray",
+            "Hudson Wilson",
+            "Logan Foster",
+            "Henry Young",
+            "Owen Wright",
+            "Levi Robinson",
+            "Isaiah James",
+            "Noah Powell",
+            "Ryan Cox"
+        ]
+    },
+    {
+        "Name": "Storm Riders",
+        "Players": [
+            "Matthew Howard",
+            "Elijah Howard",
+            "Levi Price",
+            "Owen Harris",
+            "Henry Murphy",
+            "Nolan Bell",
+            "Jackson Ross",
+            "Lucas Cox",
+            "Aiden Reed",
+            "Ryan Lewis",
+            "Benjamin Turner"
+        ]
+    },
+    {
+        "Name": "Tornado Strikers",
+        "Players": [
+            "Grayson Peterson",
+            "Oliver Bell",
+            "Levi Howard",
+            "Owen Peterson",
+            "Logan Sanders",
+            "Zachary Powell",
+            "Robert Green",
+            "Oliver Harris",
+            "Henry Davis",
+            "Mason Davis",
+            "Ethan Turner"
+        ]
+    },
+    {
+        "Name": "Viking Legends",
+        "Players": [
+            "Liam Robinson",
+            "Elijah Hall",
+            "Ryan Bennett",
+            "Hudson Davis",
+            "Levi Hayes",
+            "Jackson Morgan",
+            "Isaiah Green",
+            "Benjamin Jackson",
+            "Oliver Turner",
+            "Hudson Carter",
+            "Mason Wilson"
+        ]
+    },
+    {
+        "Name": "Dragon FC",
+        "Players": [
+            "Robert Harris",
+            "Aiden Wilson",
+            "Grayson Davis",
+            "Aiden Bell",
+            "Nolan Murphy",
+            "Oliver Price",
+            "Henry Bennett",
+            "Levi Wilson",
+            "Elijah Hall",
+            "Hudson Scott",
+            "Matthew Walker"
+        ]
+    },
+    {
+        "Name": "Blazing Bulls",
+        "Players": [
+            "Jackson Lewis",
+            "Zachary Martinez",
+            "Logan Baker",
+            "Ryan Green",
+            "Mason Smith",
+            "Isaiah Carter",
+            "Benjamin King",
+            "Elijah Gonzalez",
+            "Levi Thomas",
+            "Hudson Hayes",
+            "Noah Walker"
+        ]
+    },
+    {
+        "Name": "Titan Thunder",
+        "Players": [
+            "Aiden Clark",
+            "Robert Walker",
+            "Aiden Turner",
+            "Mason Jackson",
+            "Hudson Davis",
+            "Henry Reed",
+            "Oliver Jenkins",
+            "Ryan Lewis",
+            "Benjamin Smith",
+            "Owen Morris",
+            "Elijah Hayes"
+        ]
+    },
+    {
+        "Name": "Steel Warriors",
+        "Players": [
+            "Isaiah Brown",
+            "Logan White",
+            "Henry Wilson",
+            "Nolan Davis",
+            "Aiden Hayes",
+            "Oliver Brown",
+            "Hudson Brown",
+            "Mason Miller",
+            "Levi Brown",
+            "Aiden Parker",
+            "Isaiah Hughes"
+        ]
+    },
+    {
+        "Name": "Lone Wolves",
+        "Players": [
+            "Ryan Davis",
+            "Benjamin Harris",
+            "Noah Harris",
+            "Henry Scott",
+            "Ethan Walker",
+            "Logan Hughes",
+            "Oliver Davis",
+            "Zachary Miller",
+            "Jackson Johnson",
+            "Ryan Morris",
+            "Mason Scott"
+        ]
+    },
+    {
+        "Name": "Crimson Falcons",
+        "Players": [
+            "Hudson Miller",
+            "Aiden Green",
+            "Henry Young",
+            "Benjamin Lewis",
+            "Isaiah Price",
+            "Nolan Clark",
+            "Elijah Smith",
+            "Levi Clark",
+            "Owen Morris",
+            "Jackson Phillips",
+            "Mason White"
+        ]
+    },
+    {
+        "Name": "Iron Dragons",
+        "Players": [
+            "Ryan Scott",
+            "Benjamin Clark",
+            "Ethan Morris",
+            "Oliver Young",
+            "Zachary Walker",
+            "Henry Lewis",
+            "Levi Scott",
+            "Nolan Walker",
+            "Aiden Morris",
+            "Isaiah Walker",
+            "Oliver Phillips"
+        ]
+    },
+    {
+        "Name": "Galaxy Rovers",
+        "Players": [
+            "Ryan Young",
+            "Mason Young",
+            "Benjamin Young",
+            "Nolan Young",
+            "Henry Martinez",
+            "Ethan Green",
+            "Hudson Scott",
+            "Oliver Lewis",
+            "Jackson Walker",
+            "Mason Lewis",
+            "Benjamin Davis"
+        ]
+    },
+    {
+        "Name": "Knight Riders",
+        "Players": [
+            "Levi Young",
+            "Ethan Davis",
+            "Ryan Young",
+            "Oliver King",
+            "Henry Clark",
+            "Nolan Smith",
+            "Isaiah Young",
+            "Mason Green",
+            "Levi White",
+            "Zachary Harris",
+            "Jackson Smith"
+        ]
+    }
+]

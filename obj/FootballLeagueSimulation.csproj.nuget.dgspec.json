@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\OneDrive\\Desktop\\..d\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj": {}
+    "D:\\Learn CS\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\OneDrive\\Desktop\\..d\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj": {
+    "D:\\Learn CS\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\..d\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj",
+        "projectUniqueName": "D:\\Learn CS\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj",
         "projectName": "FootballLeagueSimulation",
-        "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\..d\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj",
+        "projectPath": "D:\\Learn CS\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\..d\\FootballLeagueSimulation\\FootballLeagueSimulation\\obj\\",
+        "outputPath": "D:\\Learn CS\\FootballLeagueSimulation\\FootballLeagueSimulation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"

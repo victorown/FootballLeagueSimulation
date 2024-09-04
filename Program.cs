@@ -10,55 +10,72 @@ public class Program
 {
     static void Main(string[] args)
     {
-        string Path = "FootballPlayerName.json";
-        string jsonData = File.ReadAllText(Path);
+        // int nt = 1;
         Random random = new();
-        List<string>? names = [.. JsonConvert.DeserializeObject<List<string>>(jsonData)!.OrderBy(x => random.Next())];
-        // List<int>  =
-         
-        int n = 0;
-        Team team = new();
-        foreach (var p in Enum.GetValues(typeof(EPosition)))
+        string dataTeam = File.ReadAllText("FootballTeam.json");
+        var teams = JsonConvert.DeserializeObject<List<Teams>>(dataTeam);
+        List<Team> finalTeam = [];
+        foreach (var t in teams!)
         {
-            switch (p)
-            {
-                case EPosition.Forward:
-                    for (int item = 0; item < 3; item++)
-                    {      
-                        Player palyerx = Player.GeneratePlayer(names[n], EPosition.Forward);
-                        team.Players.Add(palyerx);
-                        n++;
-                    }
-                    break;
-                case EPosition.Midfielder:
-                    foreach (var item in Enumerable.Range(1, 3))
-                    {
-                        Player playery = Player.GeneratePlayer(names[n], EPosition.Midfielder);
-                        team.Players.Add(playery);
-                        n++;
-                    }
-                    break;
-                case EPosition.Defender:
-                    foreach (var item in Enumerable.Range(1, 4))
-                    {
-                        Player playerz = Player.GeneratePlayer(names[n], EPosition.Defender);
-                        team.Players.Add(playerz);
-                        n++;
-                    }
-                    break;
-                case EPosition.Goalkeeper:
-                    Player playerg = Player.GeneratePlayer(names[n], EPosition.Goalkeeper);
-                    team.Players.Add(playerg);
-                    n++;
-                    break;
-            }
+            var team = Team.GenerateTeam(t);
+            finalTeam.Add(team);
         }
-        for (int i = 0; i < team.Players.Count; i++)
+
+        List<Match> finalScedule = [..Scedule.GenerateScadule(finalTeam).OrderBy(x => random.Next())];
+        List<Team> matchResult = [];
+        foreach (var x in finalScedule)
         {
-            Console.WriteLine($"Player {i+1}: {team.Players[i].Name} - {team.Players[i].Position}");
+            var winner = Match.PlayMatch(x);
+            matchResult.Add(winner);
         }
+        
+        for (int i = 0; i < finalScedule.Count; i++)
+        {
+            Console.WriteLine($"{finalScedule[i].TeamA.Name} vs {finalScedule[i].TeamB.Name}");
+            Console.WriteLine($"Winner: {matchResult[i].Name}");
+            Console.WriteLine();
+        }
+
+        // Set the table header with fixed column width
+        // string header = "| {0,-3} | {1,-20} | {2,-15} | {3,-7} | {4,-10} | {5,-10} | {6,-10} | {7,-10} | {8,-10} | {9,-10} | {10,-10} | {11,-10} | {12,-10} |";
+        // Console.WriteLine(header, "#", "Name", "Position", "Height", "Strength", "Tackle", "Stamina", "Passing", "Control", "Speed", "Acceleration", "Shot", "Handling/Reflexes");
+
+        // // Print a separator line
+        // Console.WriteLine(new string('-', 148));
+
+        // foreach (var item in finalTeam)
+        // {
+        //     Console.WriteLine($"{nt++}. Team: {item.Name}");
+        //     int n = 1;
+        //     foreach (var p in item.Players)
+        //     {
+        //         // Display the player data in a table row format
+        //         Console.WriteLine(header,
+        //             n++,
+        //             p.Name,
+        //             p.Position,
+        //             p.Height,
+        //             p.Strength,
+        //             p.Tackle,
+        //             p.Stamina,
+        //             p.Passing,
+        //             p.Control,
+        //             p.Speed,
+        //             p.Acceleration,
+        //             p.Shot,
+        //             $"{p.KeeperHandling}/{p.KeeperReflexes}");
+        //     }
+        //     Console.WriteLine(new string('-', 148)); // Separator after each team
+        //     Console.WriteLine();
+        // }
     }
+
 }
-    
+
+public class Teams
+{
+    public string? Name { get; set; }
+    public List<string>? Players { get; set; }
+}
 
 

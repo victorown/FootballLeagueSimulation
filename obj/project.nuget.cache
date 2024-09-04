@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BfKwPf4qupo=",
+  "dgSpecHash": "OUdghUyHVNc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\..d\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj",
+  "projectFilePath": "D:\\Learn CS\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

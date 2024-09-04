@@ -68,11 +68,14 @@ namespace FootballLeagueSimulation
                     Name = playerName,
                     Position = "Goalkeeper",
                     Height = random.Next(185, 195),
+                    Speed = random.Next(40, 60),
                     Strength = random.Next(70, 90),
+                    Acceleration = random.Next(40, 60),
                     Tackle = random.Next(60, 80),
                     Stamina = random.Next(60, 80),
                     Passing = random.Next(50, 70),
                     Control = random.Next(50, 70),
+                    Shot = random.Next(40, 60),
                     KeeperHandling = random.Next(70, 90),
                     KeeperReflexes = random.Next(70, 90)
                 },
@@ -80,5 +83,4 @@ namespace FootballLeagueSimulation
             };
         }
     }
-
 }

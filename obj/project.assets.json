@@ -60,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\LENOVO\\OneDrive\\Desktop\\..d\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj",
+      "projectUniqueName": "D:\\Learn CS\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj",
       "projectName": "FootballLeagueSimulation",
-      "projectPath": "c:\\Users\\LENOVO\\OneDrive\\Desktop\\..d\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj",
+      "projectPath": "D:\\Learn CS\\FootballLeagueSimulation\\FootballLeagueSimulation\\FootballLeagueSimulation.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\LENOVO\\OneDrive\\Desktop\\..d\\FootballLeagueSimulation\\FootballLeagueSimulation\\obj\\",
+      "outputPath": "D:\\Learn CS\\FootballLeagueSimulation\\FootballLeagueSimulation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"

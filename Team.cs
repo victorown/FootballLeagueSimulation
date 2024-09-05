@@ -4,19 +4,18 @@ namespace FootballLeagueSimulation
     {
         public string? Name { get; set; }
         public List<Player> Players { get; set; } = [];
-        public int Points { get; set; }
-        public int Wins { get; set; }
-        public int Losses { get; set; }
-        public int Draws { get; set; }
+        public int? Points { get; set; }
+        public int? Wins { get; set; }
+        public int? Losses { get; set; }
+        public int? Draws { get; set; }
 
         public static Team GenerateTeam(Teams teamx)
         {
             int n = 0;
-            Team newTeam = new()
+            Team newTeam = new();
             {
-                Name = teamx.Name
-            };
-            
+                newTeam.Name = teamx.Name;
+            }
             foreach (var p in Enum.GetValues(typeof(EPosition)))
             {
                 switch (p)
@@ -53,6 +52,43 @@ namespace FootballLeagueSimulation
                 }
             }
             return newTeam;
+        }
+
+        public void DisplayTeams(List<Team> finalTeams)
+        {
+            int nt = 1;
+            // Set the table header with fixed column width
+            string header = "| {0,-3} | {1,-20} | {2,-15} | {3,-7} | {4,-10} | {5,-10} | {6,-10} | {7,-10} | {8,-10} | {9,-10} | {10,-10} | {11,-10} | {12,-10} |";
+            Console.WriteLine(header, "#", "Name", "Position", "Height", "Strength", "Tackle", "Stamina", "Passing", "Control", "Speed", "Acceleration", "Shot", "Handling/Reflexes");
+
+            // // Print a separator line
+            Console.WriteLine(new string('-', 148));
+
+            foreach (var item in finalTeams)
+            {
+                Console.WriteLine($"{nt++}. Team: {item.Name}");
+                int n = 1;
+                foreach (var p in item.Players)
+                {
+                    // Display the player data in a table row format
+                    Console.WriteLine(header,
+                        n++,
+                        p.Name,
+                        p.Position,
+                        p.Height,
+                        p.Strength,
+                        p.Tackle,
+                        p.Stamina,
+                        p.Passing,
+                        p.Control,
+                        p.Speed,
+                        p.Acceleration,
+                        p.Shot,
+                        $"{p.KeeperHandling}/{p.KeeperReflexes}");
+                }
+                Console.WriteLine(new string('-', 148)); // Separator after each team
+                Console.WriteLine();
+            }
         }
 
     }

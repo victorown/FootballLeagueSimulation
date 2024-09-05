@@ -1,38 +1,38 @@
-namespace FootballLeagueSimulation;
-
-public class Match(Team teamA, Team teamB)
+namespace FootballLeagueSimulation
 {
-    public Team TeamA { get; set; } = teamA;
-    public Team TeamB { get; set; } = teamB;
-    public int ScoreA { get; set; }
-    public int ScoreB { get; set; }
-
-    public static Match PlayMatch(Match matches)
+    public class Match
     {
-        Random random = new();
-        int winner = random.Next(1, 4);
-        Team resTeamA, resTeamB;
-        Match matchResult;
-        if (winner == 1)
+        public Team? TeamA { get; set; }
+        public Team? TeamB { get; set; }
+        public int ScoreA { get; set; }
+        public int ScoreB { get; set; }
+
+        public static Match PlayMatch(Match matches)
         {
-            resTeamA = new Team { Name = matches.TeamA.Name, Wins = 1, Points = 2 };
-            resTeamB = new Team { Name = matches.TeamB.Name, Losses = 1 };
-            matchResult = new(resTeamA, resTeamB);
-            return matchResult;
+            Random random = new();
+            int scoreA = random.Next(0, 6);
+            int scoreB = random.Next(0, 6);
+
+            matches.ScoreA = scoreA;
+            matches.ScoreB = scoreB;
+
+            if (scoreA > scoreB)
+            {
+                matches.TeamA!.Wins ++;
+                matches.TeamB!.Losses ++;
+            }
+            else if (scoreB > scoreA)
+            {
+                matches.TeamA!.Losses ++;
+                matches.TeamB!.Wins ++;
+            }
+            else
+            {
+                matches.TeamA!.Draws ++;
+                matches.TeamB!.Draws ++;
+            }
+            
+            return matches;
         }
-        else if (winner == 2)
-        {
-            resTeamA = new Team { Name = matches.TeamA.Name, Losses = 1 };
-            resTeamB = new Team { Name = matches.TeamB.Name, Wins = 1, Points = 2 };
-            matchResult = new(resTeamA, resTeamB);
-            return matchResult;
-        }
-        else
-        {
-            resTeamA = new Team { Name = matches.TeamA.Name, Draws = 1, Points = 1 };
-            resTeamB = new Team { Name = matches.TeamB.Name, Draws = 1, Points = 1 };
-            matchResult = new(resTeamA, resTeamB);
-            return matchResult;
-        }        
     }
 }

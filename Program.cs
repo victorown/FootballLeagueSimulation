@@ -10,10 +10,14 @@ public class Program
 {
     static void Main(string[] args)
     {
-        // int nt = 1;
+        // initialize random
         Random random = new();
+
+        // get data from json file
         string dataTeam = File.ReadAllText("FootballTeam.json");
         var teams = JsonConvert.DeserializeObject<List<Teams>>(dataTeam);
+
+        // generate teams
         List<Team> finalTeam = [];
         foreach (var t in teams!)
         {
@@ -21,20 +25,35 @@ public class Program
             finalTeam.Add(team);
         }
 
-        Team displayTeams = new();
-        displayTeams.DisplayTeams(finalTeam);
+        // display teams
+        // Team displayTeams = new();
+        // displayTeams.DisplayTeams(finalTeam);
 
-        List<Match> finalScedule = [.. Scedule.GenerateScadule(finalTeam).OrderBy(x => random.Next())];
+        // generate scedule
+        Scedule sceduleRes = new()
+        {
+            Matches = [.. Scedule.GenerateScadule(finalTeam).Matches.OrderBy(x => random.Next())]
+        };
+
+
+        // generate match result
         List<Match> matchResult = [];
-        foreach (var x in finalScedule)
+        foreach (var x in sceduleRes.Matches)
         {
             var winner = Match.PlayMatch(x);
             matchResult.Add(winner);
         }
+        
+        League.DetermineWinner(matchResult);
 
-        Console.WriteLine(finalScedule.Count);
-        Console.WriteLine(matchResult.Count);
-
+        // foreach (var item in matchResult)
+        // {
+        //     Console.WriteLine($"Match: {item.TeamA!.Name} vs {item.TeamB!.Name}");
+        //     Console.WriteLine($"Score: {item.ScoreA} - {item.ScoreB}");
+        //     Console.WriteLine($"Team A: {item.TeamA!.Name} Wins: {item.TeamA!.Wins} Loses: {item.TeamA!.Losses} Draws: {item.TeamA!.Draws}");
+        //     Console.WriteLine($"Team B: {item.TeamB!.Name} Wins: {item.TeamB!.Wins} Loses: {item.TeamB!.Losses} Draws: {item.TeamB!.Draws}");
+        //     Console.WriteLine();
+        // }
         
     }
 

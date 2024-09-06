@@ -33,7 +33,9 @@ namespace FootballLeagueSimulation
                     Stamina = random.Next(70, 90),
                     Passing = random.Next(60, 80),
                     Control = random.Next(70, 90),
-                    Shot = random.Next(70, 90)
+                    Shot = random.Next(70, 90),
+                    KeeperHandling = random.Next(20, 30),
+                    KeeperReflexes = random.Next(20, 30)
                 },
                 EPosition.Midfielder => new Player
                 {
@@ -47,7 +49,9 @@ namespace FootballLeagueSimulation
                     Stamina = random.Next(80, 90),
                     Passing = random.Next(75, 90),
                     Control = random.Next(75, 90),
-                    Shot = random.Next(60, 85)
+                    Shot = random.Next(60, 85),
+                    KeeperHandling = random.Next(20, 30),
+                    KeeperReflexes = random.Next(20, 30)
                 },
                 EPosition.Defender => new Player
                 {
@@ -61,7 +65,9 @@ namespace FootballLeagueSimulation
                     Stamina = random.Next(70, 90),
                     Passing = random.Next(65, 80),
                     Control = random.Next(60, 80),
-                    Shot = random.Next(40, 60)
+                    Shot = random.Next(40, 60),
+                    KeeperHandling = random.Next(20, 30),
+                    KeeperReflexes = random.Next(20, 30)
                 },
                 EPosition.Goalkeeper => new Player
                 {

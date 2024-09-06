@@ -45,10 +45,13 @@ public class Program
                 }
 
                 // generate scedule
-                Scedule sceduleRes = new()
-                {
-                    Matches = [.. Scedule.GenerateScadule(league.Teams).Matches.OrderBy(x => random.Next())]
-                };
+                Scedule sceduleRes = new();
+                sceduleRes.GenerateScadule(league.Teams);
+
+                // {
+                //     // Matches = [.. Scedule.GenerateScadule(league.Teams).Matches.OrderBy(x => random.Next())]
+                //     Matches = sceduleRes.GenerateScadule(league.Teams)
+                // };
 
                 switch (nextStep)
                 {
@@ -56,7 +59,7 @@ public class Program
                         Team.DisplayTeams(league.Teams);
                         break;
                     case 2:
-                        Scedule.DisplayScedule(sceduleRes);
+                        sceduleRes.DisplayScedule();
                         break;
                     case 3:
                         Console.WriteLine("Starting the match...");
@@ -66,11 +69,7 @@ public class Program
                         Console.Write("Enter your choice: ");
                         int nextStep2 = Convert.ToInt32(Console.ReadLine());
 
-
-
-
-                        List<Match> matchResult = [];
-                        foreach (var x in sceduleRes.Matches)
+                        foreach (var x in sceduleRes.Matches.OrderBy(x => random.Next()))
                         {
                             x.PlayMatch();
                         }
@@ -78,10 +77,10 @@ public class Program
                         switch (nextStep2)
                         {
                             case 1:
-                                Match.DisplayMatchResult(matchResult);
+                                Match.DisplayMatchResult(sceduleRes.Matches);
                                 break;
                             case 2:
-                                league.DetermineWinner(matchResult);
+                                league.DetermineWinner(sceduleRes.Matches);
                                 league.DisplayFinalLeaguaStandings();
                                 break;
                             case 3:

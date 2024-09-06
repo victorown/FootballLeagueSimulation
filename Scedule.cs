@@ -5,23 +5,21 @@ public class Scedule
     // public List<Team> Teams { get; set; } = [];
     public List<Match> Matches { get; set; } = [];
 
-    public static Scedule GenerateScadule(List<Team> teams)
+    public void GenerateScadule(List<Team> teams)
     {
-        Scedule newScedule = new();
         foreach (var item in teams)
         {
             foreach (var itemX in teams)
             {
                 if (itemX.Name != item.Name)
                 {
-                    newScedule.Matches.Add(new Match { TeamA = item, TeamB = itemX });
+                    Matches.Add(new Match { TeamA = item, TeamB = itemX });
                 }
             }
         }
-        return newScedule;
     }
 
-    public static void DisplayScedule(Scedule scedule)
+    public void DisplayScedule()
     {
         // Header Tabel
         Console.WriteLine($"{"No.",-5} {"Team A",-20} {"vs",-5} {"Team B",-20}");
@@ -29,7 +27,7 @@ public class Scedule
 
         // Isi Tabel
         int matchNumber = 1;
-        foreach (var item in scedule.Matches)
+        foreach (var item in Matches)
         {
             Console.WriteLine($"{matchNumber++.ToString().PadRight(5)} {item.TeamA!.Name!.PadRight(20)} {"vs".PadRight(5)} {item.TeamB!.Name!.PadRight(20)}");
         }

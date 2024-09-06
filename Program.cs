@@ -48,11 +48,6 @@ public class Program
                 Scedule sceduleRes = new();
                 sceduleRes.GenerateScadule(league.Teams);
 
-                // {
-                //     // Matches = [.. Scedule.GenerateScadule(league.Teams).Matches.OrderBy(x => random.Next())]
-                //     Matches = sceduleRes.GenerateScadule(league.Teams)
-                // };
-
                 switch (nextStep)
                 {
                     case 1:

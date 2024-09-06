@@ -10,14 +10,29 @@ public class Scedule
         Scedule newScedule = new();
         foreach (var item in teams)
         {
-            foreach(var itemX in teams)
+            foreach (var itemX in teams)
             {
-                if(itemX.Name != item.Name)
+                if (itemX.Name != item.Name)
                 {
-                    newScedule.Matches.Add(new Match {TeamA = item, TeamB = itemX});
+                    newScedule.Matches.Add(new Match { TeamA = item, TeamB = itemX });
                 }
             }
         }
         return newScedule;
+    }
+
+    public static void DisplayScedule(Scedule scedule)
+    {
+        // Header Tabel
+        Console.WriteLine($"{"No.",-5} {"Team A",-20} {"vs",-5} {"Team B",-20}");
+        Console.WriteLine(new string('-', 55));
+
+        // Isi Tabel
+        int matchNumber = 1;
+        foreach (var item in scedule.Matches)
+        {
+            Console.WriteLine($"{matchNumber++.ToString().PadRight(5)} {item.TeamA!.Name!.PadRight(20)} {"vs".PadRight(5)} {item.TeamB!.Name!.PadRight(20)}");
+        }
+
     }
 }

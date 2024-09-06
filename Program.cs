@@ -17,44 +17,97 @@ public class Program
         string dataTeam = File.ReadAllText("FootballTeam.json");
         var teams = JsonConvert.DeserializeObject<List<Teams>>(dataTeam);
 
-        // generate teams
-        List<Team> finalTeam = [];
-        foreach (var t in teams!)
+        Console.WriteLine("Welcome to the Football League Simulation!");
+        Console.WriteLine("Please choose an option:");
+        Console.WriteLine("1. Start the simulation");
+        Console.WriteLine("2. Exit");
+        Console.Write("Enter your choice: ");
+
+        int pilihan = Convert.ToInt32(Console.ReadLine());
+        League league = new();
+        switch (pilihan)
         {
-            var team = Team.GenerateTeam(t);
-            finalTeam.Add(team);
+            case 1:
+                Console.Write("Enter league name: ");
+                league.Name = Console.ReadLine();
+                Console.WriteLine($"{league.Name} started!");
+                Console.WriteLine("\n1. See Teams");
+                Console.WriteLine("2. See Scedule");
+                Console.WriteLine("3. Start Match");
+                Console.WriteLine("4. Exit");
+                Console.Write("Enter your choice: ");
+                int nextStep = Convert.ToInt32(Console.ReadLine());
+                // generate teams
+                foreach (var t in teams!)
+                {
+                    var team = Team.GenerateTeam(t);
+                    league.Teams!.Add(team);
+                }
+
+                // generate scedule
+                Scedule sceduleRes = new()
+                {
+                    Matches = [.. Scedule.GenerateScadule(league.Teams).Matches.OrderBy(x => random.Next())]
+                };
+
+                switch (nextStep)
+                {
+                    case 1:
+                        Team.DisplayTeams(league.Teams);
+                        break;
+                    case 2:
+                        Scedule.DisplayScedule(sceduleRes);
+                        break;
+                    case 3:
+                        Console.WriteLine("Starting the match...");
+                        Console.WriteLine("1. See Match Result");
+                        Console.WriteLine("2. See Final Standings");
+                        Console.WriteLine("3. Exiting the program...");
+                        Console.Write("Enter your choice: ");
+                        int nextStep2 = Convert.ToInt32(Console.ReadLine());
+
+
+
+
+                        List<Match> matchResult = [];
+                        foreach (var x in sceduleRes.Matches)
+                        {
+                            x.PlayMatch();
+                        }
+
+                        switch (nextStep2)
+                        {
+                            case 1:
+                                Match.DisplayMatchResult(matchResult);
+                                break;
+                            case 2:
+                                league.DetermineWinner(matchResult);
+                                league.DisplayFinalLeaguaStandings();
+                                break;
+                            case 3:
+                                Console.WriteLine("Exiting the program...");
+                                break;
+                            default:
+                                Console.WriteLine("Invalid choice. Please try again.");
+                                break;
+                        }
+                        break;
+                    case 4:
+                        Console.WriteLine("Exiting the program...");
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice. Please try again.");
+                        break;
+                }
+                break;
+            case 2:
+                Console.WriteLine("Exiting the program...");
+                break;
+            default:
+                Console.WriteLine("Invalid choice. Please try again.");
+                break;
         }
 
-        // display teams
-        // Team displayTeams = new();
-        // displayTeams.DisplayTeams(finalTeam);
-
-        // generate scedule
-        Scedule sceduleRes = new()
-        {
-            Matches = [.. Scedule.GenerateScadule(finalTeam).Matches.OrderBy(x => random.Next())]
-        };
-
-
-        // generate match result
-        List<Match> matchResult = [];
-        foreach (var x in sceduleRes.Matches)
-        {
-            var winner = Match.PlayMatch(x);
-            matchResult.Add(winner);
-        }
-        
-        League.DetermineWinner(matchResult);
-
-        // foreach (var item in matchResult)
-        // {
-        //     Console.WriteLine($"Match: {item.TeamA!.Name} vs {item.TeamB!.Name}");
-        //     Console.WriteLine($"Score: {item.ScoreA} - {item.ScoreB}");
-        //     Console.WriteLine($"Team A: {item.TeamA!.Name} Wins: {item.TeamA!.Wins} Loses: {item.TeamA!.Losses} Draws: {item.TeamA!.Draws}");
-        //     Console.WriteLine($"Team B: {item.TeamB!.Name} Wins: {item.TeamB!.Wins} Loses: {item.TeamB!.Losses} Draws: {item.TeamB!.Draws}");
-        //     Console.WriteLine();
-        // }
-        
     }
 
 }

@@ -7,32 +7,45 @@ namespace FootballLeagueSimulation
         public int ScoreA { get; set; }
         public int ScoreB { get; set; }
 
-        public static Match PlayMatch(Match matches)
+        public void PlayMatch()
         {
             Random random = new();
             int scoreA = random.Next(0, 6);
             int scoreB = random.Next(0, 6);
 
-            matches.ScoreA = scoreA;
-            matches.ScoreB = scoreB;
+            ScoreA = scoreA;
+            ScoreB = scoreB;
 
             if (scoreA > scoreB)
             {
-                matches.TeamA!.Wins ++;
-                matches.TeamB!.Losses ++;
+                TeamA!.Wins++;
+                TeamB!.Losses++;
             }
             else if (scoreB > scoreA)
             {
-                matches.TeamA!.Losses ++;
-                matches.TeamB!.Wins ++;
+                TeamA!.Losses++;
+                TeamB!.Wins++;
             }
             else
             {
-                matches.TeamA!.Draws ++;
-                matches.TeamB!.Draws ++;
+                TeamA!.Draws++;
+                TeamB!.Draws++;
             }
-            
-            return matches;
+        }
+
+        public static void DisplayMatchResult(List<Match> matches)
+        {
+            // Header Tabel
+            Console.WriteLine($"{"No.",-5} {"Team A",-20} {"vs",-5} {"Team B",-20} {"Score",-10}");
+            Console.WriteLine(new string('-', 65));
+
+            // Isi Tabel
+            int matchNumber = 1;
+            foreach (var item in matches)
+            {
+                Console.WriteLine($"{matchNumber++.ToString().PadRight(5)} {item.TeamA!.Name!.PadRight(20)} {"vs".PadRight(5)} {item.TeamB!.Name!.PadRight(20)} {($"{item.ScoreA} - {item.ScoreB}").PadRight(10)}");
+            }
+
         }
     }
 }

@@ -54,7 +54,7 @@ namespace FootballLeagueSimulation
             return newTeam;
         }
 
-        public void DisplayTeams(List<Team> finalTeams)
+        public static void DisplayTeams(List<Team> finalTeams)
         {
             int nt = 1;
             // Set the table header with fixed column width
